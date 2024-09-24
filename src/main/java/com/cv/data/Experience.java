@@ -1,28 +1,37 @@
 package com.cv.data;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table(name = "experience")
 @Data // Lombok annotation to auto-generate getters and setters
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Experience {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String employer;
 
-    @Column(nullable = false, unique = true)
-    private String email;
+    @Column(nullable = false)
+    private String start_date;
 
-    private String location;
-    private String image;
-    private String position;
-    private String description;
-    private String number;
+    @Column(nullable = false)
+    private String end_date;
+
+    private String logo;
+
+    // Define foreign key to User entity
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 }
+
+
+

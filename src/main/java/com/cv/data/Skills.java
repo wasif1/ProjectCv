@@ -6,11 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "experience")
+@Table(name = "skills")
 @Data // Lombok annotation to auto-generate getters and setters
 @NoArgsConstructor
 @AllArgsConstructor
-public class Projects {
+public class Skills {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,9 @@ public class Projects {
 
     private String description;
     private String image;
-    private String source_url;
 
     // Define foreign key to User entity
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 }

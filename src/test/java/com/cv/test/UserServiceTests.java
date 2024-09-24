@@ -1,4 +1,4 @@
-package com.cv;
+package com.cv.test;
 
 import com.cv.data.User;
 import com.cv.services.UserService;
