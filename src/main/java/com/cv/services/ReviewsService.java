@@ -1,8 +1,10 @@
 package com.cv.services;
 
-import com.cv.data.Experience;
+import com.cv.data.Projects;
+import com.cv.data.Reviews;
 import com.cv.data.User;
-import com.cv.repository.ExperienceRepository;
+import com.cv.repository.ProjectsRepository;
+import com.cv.repository.ReviewsRepository;
 import com.cv.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,33 +13,33 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ExperienceService {
+public class ReviewsService {
 
     @Autowired
-    private ExperienceRepository repository;
+    private ReviewsRepository repository;
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
-    public ExperienceService(ExperienceRepository repository) {
+    public ReviewsService(ReviewsRepository repository) {
         this.repository = repository;
     }
 
-    public Experience create(Long userId, Experience experience) {
+    public Reviews create(Long userId, Reviews data) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        experience.setUser(user);  // Set the user for this experience
-        return repository.save(experience);
+        data.setUser(user);  // Set the user for this experience
+        return repository.save(data);
     }
 
     // Get all Experience
-    public List<Experience> getAll() {
+    public List<Reviews> getAll() {
         return repository.findAll();
     }
 
     // Get a user by ID
-    public Experience getById(Long id) {
-        Optional<Experience> obj = repository.findById(id);
+    public Reviews getById(Long id) {
+        Optional<Reviews> obj = repository.findById(id);
         if (obj.isPresent()) {
             return obj.get();
         } else {
@@ -46,11 +48,11 @@ public class ExperienceService {
     }
 
     // Update an existing Experience
-    public Experience update(Long id, Experience data) {
-        Experience obj = getById(id); // Fetch the first
+    public Reviews update(Long id, Reviews data) {
+        Reviews obj = getById(id); // Fetch the first
+        obj.setName(data.getName());
         obj.setEmployer(data.getEmployer());
-        obj.setStart_date(data.getStart_date());
-        obj.setEnd_date(data.getEnd_date());
+        obj.setReview(data.getReview());
         return repository.save(obj); // Save the updated
     }
 

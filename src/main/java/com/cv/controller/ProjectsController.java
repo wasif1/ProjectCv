@@ -1,10 +1,7 @@
 package com.cv.controller;
 
-import com.cv.data.Experience;
-import com.cv.data.User;
-import com.cv.services.ExperienceService;
-import com.cv.services.UserService;
-import jakarta.websocket.server.PathParam;
+import com.cv.data.Projects;
+import com.cv.services.ProjectsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -13,43 +10,43 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/experience")
+@RequestMapping("/api/projects")
 @Validated
-public class ExperienceController {
+public class ProjectsController {
 
     @Autowired
-    private ExperienceService service;
+    private ProjectsService service;
 
     @Autowired
-    public ExperienceController(ExperienceService service) {
+    public ProjectsController(ProjectsService service) {
         this.service = service;
     }
 
     // Create a new Experience
     @PostMapping("/users/{userId}")
-    public ResponseEntity<Experience> create(@PathVariable Long userId, @RequestBody Experience obj) {
-        Experience created = service.create(userId, obj);
+    public ResponseEntity<Projects> create(@PathVariable Long userId, @RequestBody Projects obj) {
+        Projects created = service.create(userId, obj);
         return ResponseEntity.ok(created);
     }
 
     // Get all Users
     @GetMapping
-    public ResponseEntity<List<Experience>> getAll() {
-        List<Experience> obj = service.getAll();
+    public ResponseEntity<List<Projects>> getAll() {
+        List<Projects> obj = service.getAll();
         return ResponseEntity.ok(obj);
     }
 
     // Get a Experience by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Experience> getById(@PathVariable Long id) {
-        Experience obj = service.getById(id);
+    public ResponseEntity<Projects> getById(@PathVariable Long id) {
+        Projects obj = service.getById(id);
         return ResponseEntity.ok(obj);
     }
 
     // Update an existing Experience
     @PutMapping("/{id}")
-    public ResponseEntity<Experience> update(@PathVariable Long id, @RequestBody Experience updated) {
-        Experience obj = service.update(id, updated);
+    public ResponseEntity<Projects> update(@PathVariable Long id, @RequestBody Projects updated) {
+        Projects obj = service.update(id, updated);
         return ResponseEntity.ok(obj);
     }
 
