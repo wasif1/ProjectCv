@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa62580-5ced-4539-8511-d1946ca3c42f" name="Changes" comment="Experience Api added">
-      <change afterPath="$PROJECT_DIR$/Readme.dm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/controller/ProjectsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/controller/ReviewsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/controller/ServicesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/controller/SkillsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/repository/ProjectsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/repository/ReviewsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/repository/ServicesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/repository/SkillsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/services/ProjectsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/services/ReviewsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/services/ServicesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cv/services/SkillsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/controller/ExperienceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/controller/ExperienceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/data/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/data/Experience.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/data/Projects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/data/Projects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/data/Reviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/data/Reviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/data/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/data/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/data/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/data/Skills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/data/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cv/services/ExperienceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cv/services/ExperienceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cv/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cv/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cv/test/UserServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cv/test/UserServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +37,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="staging" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -88,6 +74,8 @@
     &quot;Gradle.ProjectCv [:com.cv.MainApplicationClass.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ProjectCv [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ProjectCv.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserControllerTest.shouldReturnDefaultMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTests (1).executor&quot;: &quot;Run&quot;,
     &quot;Gradle.UserServiceTests.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.UserServiceTests.testCreateUser.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -112,7 +100,7 @@
       <recent name="com.cv.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApplicationClass">
+  <component name="RunManager" selected="Gradle.UserControllerTest.shouldReturnDefaultMessage">
     <configuration name="MainApplicationClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cv.MainApplicationClass" />
       <module name="ProjectCv.main" />
@@ -125,6 +113,54 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="UserControllerTest.shouldReturnDefaultMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.cv.controller.UserControllerTest.shouldReturnDefaultMessage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.cv.test.UserServiceTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="UserServiceTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -176,9 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApplicationClass" />
-        <item itemvalue="Gradle.UserServiceTests" />
+        <item itemvalue="Gradle.UserServiceTests (1)" />
         <item itemvalue="Gradle.UserServiceTests.testCreateUser" />
+        <item itemvalue="Gradle.UserServiceTests" />
+        <item itemvalue="Gradle.UserControllerTest.shouldReturnDefaultMessage" />
+        <item itemvalue="Application.MainApplicationClass" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727208046460</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Experience Api added">
+      <option name="closed" value="true" />
+      <created>1727294549265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727294549265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
