@@ -1,2 +1,8 @@
 rootProject.name = "ProjectCv"
+include 'User'
+include 'Experience'
+include 'Projects'
+include 'Skills'
+include 'Reviews'
+include 'Services'
 
