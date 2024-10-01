@@ -1,0 +1,45 @@
+plugins {
+    id ("org.springframework.boot") version "3.1.2"
+    id ("io.spring.dependency-management") version "1.1.2"
+    id("java")
+}
+
+group = "com.experience"
+version = "1.0"
+sourceCompatibility = "17" // Use the JDK version you're working with
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+
+    // Postgresql
+    implementation 'org.postgresql:postgresql:42.7.2' // Latest version as of now
+
+    // Spring Boot Web dependency for building REST APIs
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Data JPA for ORM (Object-Relational Mapping)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // H2 Database (for in-memory testing, replace with MySQL or PostgreSQL in production)
+    runtimeOnly 'com.h2database:h2'
+
+    // Lombok to reduce boilerplate code like getters, setters, and constructors
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    // Spring Boot Starter Test (JUnit 5, Mockito)
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Spring Boot Starter Validation
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
