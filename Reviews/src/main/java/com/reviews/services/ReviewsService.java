@@ -1,10 +1,8 @@
 package com.reviews.services;
 
 import com.reviews.data.Reviews;
+import com.reviews.data.User;
 import com.reviews.repository.ReviewsRepository;
-import com.user.data.User;
-import com.user.repository.UserRepository;
-import com.user.services.RestTemplateConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -18,8 +16,8 @@ import java.util.Optional;
 @Service
 public class ReviewsService {
 
-    @Value("${api.base.url}")
-    private String apiBaseUrl;
+    @Value("${api.base.url.user}")
+    private String apiBaseUrlUser;
     @Autowired
     private ReviewsRepository repository;
     @Autowired
@@ -32,12 +30,13 @@ public class ReviewsService {
 
     public Reviews create(Long userId, Reviews data) {
         // API call to User microservice to validate userId
-        String userServiceUrl = apiBaseUrl + "/users" + userId;
+        String userServiceUrl = apiBaseUrlUser + "/users/" + userId;
+        System.out.println(userServiceUrl);
         ResponseEntity<User> userResponse = restTemplate.restTemplate().getForEntity(userServiceUrl, User.class);
 
         if (userResponse.getStatusCode() == HttpStatus.OK) {
             // Save if user exists
-            data.setUser_id(userId);  // Set the user for this experience
+            data.setUser_id(userId);  // Set the user for this Reviews
             Reviews saved = repository.save(data);
             return ResponseEntity.ok(saved).getBody();
         } else {
@@ -46,7 +45,7 @@ public class ReviewsService {
         }
     }
 
-    // Get all Experience
+    // Get all Reviews
     public List<Reviews> getAll() {
         return repository.findAll();
     }
@@ -57,11 +56,21 @@ public class ReviewsService {
         if (obj.isPresent()) {
             return obj.get();
         } else {
-            throw new RuntimeException("Experience not found with id: " + id);
+            throw new RuntimeException("Reviews not found with id: " + id);
         }
     }
 
-    // Update an existing Experience
+    // Get a user by user_id
+    public List<Reviews> getByUserId(Long user_id) {
+        Optional<List<Reviews>> obj = repository.findByUserId(user_id);
+        if (obj.isPresent()) {
+            return obj.get();
+        } else {
+            throw new RuntimeException("Reviews not found with user_id: " + user_id);
+        }
+    }
+
+    // Update an existing Reviews
     public Reviews update(Long id, Reviews data) {
         Reviews obj = getById(id); // Fetch the first
         obj.setName(data.getName());
@@ -70,7 +79,7 @@ public class ReviewsService {
         return repository.save(obj); // Save the updated
     }
 
-    // Delete a Experience
+    // Delete a Reviews
     public void delete(Long id) {
         repository.deleteById(id);
     }

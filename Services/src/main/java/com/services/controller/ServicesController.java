@@ -43,6 +43,13 @@ public class ServicesController {
         return ResponseEntity.ok(obj);
     }
 
+    // Get a Projects by User ID
+    @GetMapping("/users/{userId}")
+    public ResponseEntity<List<Services>> getUserProjById(@PathVariable Long userId) {
+        List<Services> obj = service.getByUserId(userId);
+        return ResponseEntity.ok(obj);
+    }
+
     // Update an existing Experience
     @PutMapping("/{id}")
     public ResponseEntity<Services> update(@PathVariable Long id, @RequestBody Services updated) {

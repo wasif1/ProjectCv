@@ -43,6 +43,13 @@ public class SkillsController {
         return ResponseEntity.ok(obj);
     }
 
+    // Get a Projects by User ID
+    @GetMapping("/users/{userId}")
+    public ResponseEntity<List<Skills>> getUserProjById(@PathVariable Long userId) {
+        List<Skills> obj = service.getByUserId(userId);
+        return ResponseEntity.ok(obj);
+    }
+
     // Update an existing Experience
     @PutMapping("/{id}")
     public ResponseEntity<Skills> update(@PathVariable Long id, @RequestBody Skills updated) {

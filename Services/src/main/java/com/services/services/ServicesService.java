@@ -2,10 +2,8 @@ package com.services.services;
 
 
 import com.services.data.Services;
+import com.services.data.User;
 import com.services.repository.ServicesRepository;
-import com.user.data.User;
-import com.user.repository.UserRepository;
-import com.user.services.RestTemplateConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -19,8 +17,8 @@ import java.util.Optional;
 @Service
 public class ServicesService {
 
-    @Value("${api.base.url}")
-    private String apiBaseUrl;
+    @Value("${api.base.url.user}")
+    private String apiBaseUrlUser;
     @Autowired
     private ServicesRepository repository;
     @Autowired
@@ -33,12 +31,12 @@ public class ServicesService {
 
     public Services create(Long userId, Services data) {
         // API call to User microservice to validate userId
-        String userServiceUrl = apiBaseUrl + "/users" + userId;
+        String userServiceUrl = apiBaseUrlUser + "/users/" + userId;
         ResponseEntity<User> userResponse = restTemplate.restTemplate().getForEntity(userServiceUrl, User.class);
 
         if (userResponse.getStatusCode() == HttpStatus.OK) {
             // Save if user exists
-            data.setUser_id(userId);  // Set the user for this experience
+            data.setUser_id(userId);  // Set the user for this Services
             Services saved = repository.save(data);
             return ResponseEntity.ok(saved).getBody();
         } else {
@@ -47,7 +45,7 @@ public class ServicesService {
         }
     }
 
-    // Get all Experience
+    // Get all Services
     public List<Services> getAll() {
         return repository.findAll();
     }
@@ -58,11 +56,21 @@ public class ServicesService {
         if (obj.isPresent()) {
             return obj.get();
         } else {
-            throw new RuntimeException("Experience not found with id: " + id);
+            throw new RuntimeException("Services not found with id: " + id);
         }
     }
 
-    // Update an existing Experience
+    // Get a user by user_id
+    public List<Services> getByUserId(Long user_id) {
+        Optional<List<Services>> obj = repository.findByUserId(user_id);
+        if (obj.isPresent()) {
+            return obj.get();
+        } else {
+            throw new RuntimeException("Services not found with user_id: " + user_id);
+        }
+    }
+
+    // Update an existing Services
     public Services update(Long id, Services data) {
         Services obj = getById(id); // Fetch the first
         obj.setName(data.getName());
@@ -71,7 +79,7 @@ public class ServicesService {
         return repository.save(obj); // Save the updated
     }
 
-    // Delete a Experience
+    // Delete a Services
     public void delete(Long id) {
         repository.deleteById(id);
     }
