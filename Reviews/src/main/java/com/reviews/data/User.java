@@ -1,4 +1,4 @@
-package com.projects.data;
+package com.reviews.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

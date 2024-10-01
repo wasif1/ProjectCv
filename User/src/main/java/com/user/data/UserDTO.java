@@ -19,6 +19,10 @@ public class UserDTO {
     private String number;
 
     private ExperienceDTO[] experiences;
+    private Projects[] projects;
+    private Reviews[] reviews;
+    private Services[] services;
+    private Skills[] skills;
 }
 
 

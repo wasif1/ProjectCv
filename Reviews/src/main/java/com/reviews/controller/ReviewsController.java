@@ -43,6 +43,13 @@ public class ReviewsController {
         return ResponseEntity.ok(obj);
     }
 
+    // Get a Projects by User ID
+    @GetMapping("/users/{userId}")
+    public ResponseEntity<List<Reviews>> getUserProjById(@PathVariable Long userId) {
+        List<Reviews> obj = service.getByUserId(userId);
+        return ResponseEntity.ok(obj);
+    }
+
     // Update an existing Experience
     @PutMapping("/{id}")
     public ResponseEntity<Reviews> update(@PathVariable Long id, @RequestBody Reviews updated) {

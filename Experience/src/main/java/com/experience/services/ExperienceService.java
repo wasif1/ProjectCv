@@ -63,8 +63,6 @@ public class ExperienceService {
         }
     }
 
-
-
     // Get a user by user_id
     public List<Experience> getByUserId(Long user_id) {
         Optional<List<Experience>> obj = repository.findByUserId(user_id);

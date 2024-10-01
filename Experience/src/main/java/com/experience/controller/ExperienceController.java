@@ -43,7 +43,7 @@ public class ExperienceController {
         return ResponseEntity.ok(obj);
     }
 
-    // Get a Experience by ID
+    // Get a Experience by User ID
     @GetMapping("/users/{userId}")
     public ResponseEntity<List<Experience>> getUserExpById(@PathVariable Long userId) {
         List<Experience> obj = service.getByUserId(userId);

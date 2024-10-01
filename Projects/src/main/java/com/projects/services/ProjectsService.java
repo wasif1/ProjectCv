@@ -17,8 +17,8 @@ import java.util.Optional;
 @Service
 public class ProjectsService {
 
-    @Value("${api.base.url}")
-    private String apiBaseUrl;
+    @Value("${api.base.url.user}")
+    private String apiBaseUrlUser;
     @Autowired
     private ProjectsRepository repository;
     @Autowired
@@ -31,21 +31,22 @@ public class ProjectsService {
 
     public Projects create(Long userId, Projects data) {
         // API call to User microservice to validate userId
-        String userServiceUrl = apiBaseUrl + "/users" + userId;
+        String userServiceUrl = apiBaseUrlUser + "/users/" + userId;
+        System.out.println(userServiceUrl);
         ResponseEntity<User> userResponse = restTemplate.restTemplate().getForEntity(userServiceUrl, User.class);
 
         if (userResponse.getStatusCode() == HttpStatus.OK) {
             // Save if user exists
-            data.setUser_id(userId);  // Set the user for this experience
+            data.setUser_id(userId);  // Set the user for this Projects
             Projects saved = repository.save(data);
             return ResponseEntity.ok(saved).getBody();
         } else {
             // Handle invalid userId case
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid userId");
+            throw new RuntimeException("Projects not found with user id: " + userId);
         }
     }
 
-    // Get all Experience
+    // Get all Projects
     public List<Projects> getAll() {
         return repository.findAll();
     }
@@ -56,11 +57,22 @@ public class ProjectsService {
         if (obj.isPresent()) {
             return obj.get();
         } else {
-            throw new RuntimeException("Experience not found with id: " + id);
+            throw new RuntimeException("Projects not found with id: " + id);
         }
     }
 
-    // Update an existing Experience
+
+    // Get a user by user_id
+    public List<Projects> getByUserId(Long user_id) {
+        Optional<List<Projects>> obj = repository.findByUserId(user_id);
+        if (obj.isPresent()) {
+            return obj.get();
+        } else {
+            throw new RuntimeException("Projects not found with user_id: " + user_id);
+        }
+    }
+
+    // Update an existing Projects
     public Projects update(Long id, Projects data) {
         Projects obj = getById(id); // Fetch the first
         obj.setName(data.getName());
@@ -69,7 +81,7 @@ public class ProjectsService {
         return repository.save(obj); // Save the updated
     }
 
-    // Delete a Experience
+    // Delete a Projects
     public void delete(Long id) {
         repository.deleteById(id);
     }

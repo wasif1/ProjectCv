@@ -1,9 +1,9 @@
 package com.skills.services;
 
 import com.skills.data.Skills;
+import com.skills.data.User;
 import com.skills.repository.SkillsRepository;
-import com.user.data.User;
-import com.user.services.RestTemplateConfig;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -17,8 +17,8 @@ import java.util.Optional;
 @Service
 public class SkillsService {
 
-    @Value("${api.base.url}")
-    private String apiBaseUrl;
+    @Value("${api.base.url.user}")
+    private String apiBaseUrlUser;
     @Autowired
     private SkillsRepository repository;
     @Autowired
@@ -31,7 +31,7 @@ public class SkillsService {
 
     public Skills create(Long userId, Skills data) {
         // API call to User microservice to validate userId
-        String userServiceUrl = apiBaseUrl + "/users" + userId;
+        String userServiceUrl = apiBaseUrlUser + "/users/" + userId;
         ResponseEntity<User> userResponse = restTemplate.restTemplate().getForEntity(userServiceUrl, User.class);
 
         if (userResponse.getStatusCode() == HttpStatus.OK) {
@@ -57,6 +57,16 @@ public class SkillsService {
             return obj.get();
         } else {
             throw new RuntimeException("Experience not found with id: " + id);
+        }
+    }
+
+    // Get a user by user_id
+    public List<Skills> getByUserId(Long user_id) {
+        Optional<List<Skills>> obj = repository.findByUserId(user_id);
+        if (obj.isPresent()) {
+            return obj.get();
+        } else {
+            throw new RuntimeException("Services not found with user_id: " + user_id);
         }
     }
 
