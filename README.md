@@ -105,9 +105,14 @@ List of software and tools which you need to get started
    psql postgres
    ```
 
-* Create a new database for your Spring Boot application:
+* Create a new databases for each module:
    ```sh
-   CREATE DATABASE your_database_name;
+   CREATE DATABASE userdb;
+   CREATE DATABASE projectsdb;
+   CREATE DATABASE skillsdb;
+   CREATE DATABASE reviewsdb;
+   CREATE DATABASE experiencedb;
+   CREATE DATABASE servicesdb;
    ```
 
 * Create a new user:
@@ -115,7 +120,7 @@ List of software and tools which you need to get started
    CREATE USER your_username WITH PASSWORD 'your_password';
    ```
 
-* Grant all privileges on the database to the user:
+* Grant all privileges on all the databases to the user:
    ```sh
    GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
    ```
@@ -129,6 +134,103 @@ List of software and tools which you need to get started
    ```sh
    kill -9 <PID>
    ```
+
+* Now Goto Each module and run its main class:
+   ```sh
+   User module -> MainUser class
+   Experience module -> MainExperience class
+   Projects module -> MainProjects class
+   Reviews module -> MainReviews class
+   Services module -> MainServices class
+   Skills module -> MainSkills class
+   ```
+  
+* Once all the services are running. Then you can check the following api URL in Postman.
+  ### Users Api (PORT 8081)
+  ```sh
+   GET -> http://localhost:8081/api/users/{user_id}
+   POST -> http://localhost:8081/api/users
+   
+   Param -> Body -> raw -> JSON 
+   
+   { //Required fields
+    "name": "Name",
+    "email": "name@xyz.com"
+   }
+   ```
+
+  ### Experience Api (PORT 8080)
+  ```sh
+   GET -> http://localhost:8080/api/experience/users/{user_id}
+   POST -> http://localhost:8080/api/experience/users/{user_id}
+   
+   Param -> Body -> raw -> JSON 
+   
+   { //Required fields
+    "employer": "test1",
+    "start_date": "12/11/2023",
+    "end_date": "12/11/2023"
+   }
+   ```
+
+  ### Projects Api (PORT 8082)
+    ```sh
+     GET -> http://localhost:8082/api/projects
+     POST -> http://localhost:8082/api/projects/users/{user_id}
+     
+     Param -> Body -> raw -> JSON 
+     
+     { //Required fields
+      "name": "test",
+      "start_date": "12/11/2023",
+      "end_date": "12/11/2023"
+     }
+     ```
+
+  ### Reviews Api (PORT 8083)
+    ```sh
+     GET -> http://localhost:8083/api/reviews
+     POST -> http://localhost:8083/api/reviews/users/{user_id}
+     
+     Param -> Body -> raw -> JSON 
+     
+     { //Required fields
+      "name": "test",
+      "start_date": "12/11/2023",
+      "end_date": "12/11/2023"
+     }
+     ```
+
+  ### Services Api (PORT 8084)
+    ```sh
+     GET -> http://localhost:8084/api/services
+     POST -> http://localhost:8084/api/services/users/{user_id}
+     
+     Param -> Body -> raw -> JSON 
+     
+     { //Required fields
+      "name": "test",
+      "start_date": "12/11/2023",
+      "end_date": "12/11/2023"
+     }
+     ```
+
+  ### Skills Api (PORT 8085)
+    ```sh
+     GET -> http://localhost:8085/api/skills
+     POST -> http://localhost:8085/api/skills/users/{user_id}
+     
+     Param -> Body -> raw -> JSON 
+     
+     { //Required fields
+      "name": "test",
+      "start_date": "12/11/2023",
+      "end_date": "12/11/2023"
+     }
+     ```
+
+### NOTE: If you notice all microservices have different PORTS, so its very important to use the correct port to get the expected result.
+
 
 <!-- CONTACT -->
 ## Contact
