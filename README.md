@@ -232,7 +232,7 @@ List of software and tools which you need to get started
 ### NOTE: If you notice all microservices have different PORTS, so its very important to use the correct port to get the expected result.
 
 * You can get the `POSTMAN` file from
-  [here.](https://github.com/name/ProjectCv/postman/postman_collection.json)
+  [here.](https://github.com/wasif1/ProjectCv/postman/postman_collection.json)
 
 
 <!-- CONTACT -->
