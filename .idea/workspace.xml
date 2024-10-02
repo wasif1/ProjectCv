@@ -5,46 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa62580-5ced-4539-8511-d1946ca3c42f" name="Changes" comment="Microservices">
-      <change afterPath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/data/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/src/main/java/com/services/data/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Skills/src/main/java/com/skills/data/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experience/src/main/java/com/experience/controller/ExperienceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Experience/src/main/java/com/experience/controller/ExperienceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experience/src/main/java/com/experience/services/ExperienceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Experience/src/main/java/com/experience/services/ExperienceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/java/com/projects/MainProjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/java/com/projects/MainProjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/java/com/projects/controller/ProjectsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/java/com/projects/controller/ProjectsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/java/com/projects/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/java/com/projects/data/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/java/com/projects/repository/ProjectsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/java/com/projects/repository/ProjectsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/java/com/projects/services/ProjectsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/java/com/projects/services/ProjectsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/MainReviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/MainReviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/controller/ReviewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/controller/ReviewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/repository/ReviewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/repository/ReviewsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/services/ReviewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/java/com/reviews/services/ReviewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/services/MainServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/services/MainServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/services/controller/ServicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/services/controller/ServicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/services/repository/ServicesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/services/repository/ServicesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/java/com/services/services/ServicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/java/com/services/services/ServicesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/java/com/skills/MainSkills.java" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/java/com/skills/MainSkills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/java/com/skills/controller/SkillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/java/com/skills/controller/SkillsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/java/com/skills/repository/SkillsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/java/com/skills/repository/SkillsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/java/com/skills/services/SkillsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/java/com/skills/services/SkillsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/java/com/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/com/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/java/com/user/data/Projects.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/com/user/data/Projects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/java/com/user/data/Reviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/com/user/data/Reviews.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/java/com/user/data/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/com/user/data/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/java/com/user/data/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/com/user/data/Skills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/java/com/user/data/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/java/com/user/data/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/resources/application-prod.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +24,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ProjectCv" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -91,6 +63,16 @@
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/wasif1/ProjectCv.git&quot;,
     &quot;accountId&quot;: &quot;dd959a8f-59b8-41e1-a4ac-bcadf945b4e6&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;wasif1&quot;,
+    &quot;repository&quot;: &quot;ProjectCv&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -104,37 +86,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build ProjectCv.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv [:com.cv.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv [:com.cv.MainApplicationClass.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv:Experience [:Experience:com.experience.MainExperience.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv:Projects [:Projects:com.projects.MainProjects.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv:Reviews [:Reviews:com.reviews.MainReviews.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv:Services [:Services:com.services.MainServices.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv:Skills [:Skills:com.skills.MainSkills.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv:User [:User:com.user.MainUser.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProjectCv:User [:User:user.MainUser.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserControllerTest.shouldReturnDefaultMessage.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTests (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UserServiceTests.testCreateUser.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;microservices&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/waxif/IdeaProjects/ProjectCv/User/src/main/resources&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/waxif/IdeaProjects/ProjectCv/Services/src/main/java/com/services/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build ProjectCv.executor": "Run",
+    "Gradle.ProjectCv [:com.cv.Main.main()].executor": "Run",
+    "Gradle.ProjectCv [:com.cv.MainApplicationClass.main()].executor": "Run",
+    "Gradle.ProjectCv [:org.example.Main.main()].executor": "Run",
+    "Gradle.ProjectCv.executor": "Run",
+    "Gradle.ProjectCv:Experience [:Experience:com.experience.MainExperience.main()].executor": "Run",
+    "Gradle.ProjectCv:Projects [:Projects:com.projects.MainProjects.main()].executor": "Run",
+    "Gradle.ProjectCv:Reviews [:Reviews:com.reviews.MainReviews.main()].executor": "Run",
+    "Gradle.ProjectCv:Services [:Services:com.services.MainServices.main()].executor": "Run",
+    "Gradle.ProjectCv:Skills [:Skills:com.skills.MainSkills.main()].executor": "Run",
+    "Gradle.ProjectCv:User [:User:com.user.MainUser.main()].executor": "Run",
+    "Gradle.ProjectCv:User [:User:user.MainUser.main()].executor": "Run",
+    "Gradle.UserControllerTest.shouldReturnDefaultMessage.executor": "Run",
+    "Gradle.UserServiceTests (1).executor": "Run",
+    "Gradle.UserServiceTests.executor": "Run",
+    "Gradle.UserServiceTests.testCreateUser.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "microservices",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/waxif/IdeaProjects/ProjectCv/User/src/main/resources",
+    "onboarding.tips.debug.path": "/Users/waxif/IdeaProjects/ProjectCv/Services/src/main/java/com/services/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/User/src/main/resources" />
@@ -271,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727814090685</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Microservices">
+      <option name="closed" value="true" />
+      <created>1727823382214</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727823382214</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
