@@ -135,7 +135,7 @@ List of software and tools which you need to get started
    kill -9 <PID>
    ```
 
-* Now Goto Each module and run its main class:
+  ### Now Goto Each module and run its main class to start the microservice:
    ```sh
    User module -> MainUser class
    Experience module -> MainExperience class
@@ -230,6 +230,9 @@ List of software and tools which you need to get started
      ```
 
 ### NOTE: If you notice all microservices have different PORTS, so its very important to use the correct port to get the expected result.
+
+* You can get the `POSTMAN` file from
+  [here.](https://github.com/name/ProjectCv/postman/postman_collection.json)
 
 
 <!-- CONTACT -->
