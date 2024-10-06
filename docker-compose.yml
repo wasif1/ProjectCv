@@ -10,6 +10,7 @@ services:
       - spring-net
     ports:
       - "5436:5432"
+      -
 
   postgres-experience:
     image: postgres
