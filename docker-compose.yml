@@ -1,0 +1,150 @@
+
+services:
+  postgres-user:
+    image: postgres
+    environment:
+      POSTGRES_USER: waxif
+      POSTGRES_PASSWORD: waxif
+      POSTGRES_DB: userdb
+    networks:
+      - spring-net
+    ports:
+      - "5436:5432"
+
+  postgres-experience:
+    image: postgres
+    environment:
+      POSTGRES_USER: waxif
+      POSTGRES_PASSWORD: waxif
+      POSTGRES_DB: experiencedb
+    networks:
+      - spring-net
+    ports:
+      - "5435:5432"
+
+  postgres-projects:
+    image: postgres
+    environment:
+      POSTGRES_USER: waxif
+      POSTGRES_PASSWORD: waxif
+      POSTGRES_DB: projectsdb
+    networks:
+      - spring-net
+    ports:
+      - "5434:5432"
+
+  postgres-reviews:
+      image: postgres
+      environment:
+        POSTGRES_USER: waxif
+        POSTGRES_PASSWORD: waxif
+        POSTGRES_DB: reviewsdb
+      networks:
+        - spring-net
+      ports:
+        - "5433:5432"
+
+  postgres-services:
+    image: postgres
+    environment:
+      POSTGRES_USER: waxif
+      POSTGRES_PASSWORD: waxif
+      POSTGRES_DB: servicesdb
+    networks:
+      - spring-net
+    ports:
+      - "5432:5432"
+
+  postgres-skills:
+    image: postgres
+    environment:
+      POSTGRES_USER: waxif
+      POSTGRES_PASSWORD: waxif
+      POSTGRES_DB: skillsdb
+    networks:
+      - spring-net
+    ports:
+      - "5431:5432"
+
+  user-service:
+    image: user-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-user:5432/userdb
+      SPRING_DATASOURCE_USERNAME: waxif
+      SPRING_DATASOURCE_PASSWORD: waxif
+    depends_on:
+      - postgres-user
+    networks:
+      - spring-net
+    ports:
+      - "8081:8080"
+
+  experience-service:
+    image: experience-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-experience:5432/experiencedb
+      SPRING_DATASOURCE_USERNAME: waxif
+      SPRING_DATASOURCE_PASSWORD: waxif
+    depends_on:
+      - postgres-experience
+      - user-service
+    networks:
+      - spring-net
+    ports:
+      - "8080:8080"
+
+  projects-service:
+    image: projects-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-projects:5432/projectsdb
+      SPRING_DATASOURCE_USERNAME: waxif
+      SPRING_DATASOURCE_PASSWORD: waxif
+    depends_on:
+      - postgres-projects
+    networks:
+      - spring-net
+    ports:
+      - "8082:8080"
+
+  reviews-service:
+    image: reviews-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-reviews:5432/reviewsdb
+      SPRING_DATASOURCE_USERNAME: waxif
+      SPRING_DATASOURCE_PASSWORD: waxif
+    depends_on:
+      - postgres-reviews
+    networks:
+      - spring-net
+    ports:
+      - "8083:8080"
+
+  services-service:
+    image: services-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-services:5432/servicesdb
+      SPRING_DATASOURCE_USERNAME: waxif
+      SPRING_DATASOURCE_PASSWORD: waxif
+    depends_on:
+      - postgres-services
+    networks:
+      - spring-net
+    ports:
+      - "8084:8080"
+
+  skills-service:
+    image: skills-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-skills:5432/skillsdb
+      SPRING_DATASOURCE_USERNAME: waxif
+      SPRING_DATASOURCE_PASSWORD: waxif
+    depends_on:
+      - postgres-skills
+    networks:
+      - spring-net
+    ports:
+      - "8085:8080"
+
+networks:
+  spring-net:
+    driver: bridge

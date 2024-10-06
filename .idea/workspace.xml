@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa62580-5ced-4539-8511-d1946ca3c42f" name="Changes" comment="Microservices">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Experience/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reviews/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Skills/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experience/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Experience/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experience/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Experience/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reviews/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skills/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Skills/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/resources/application-prod.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +126,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "microservices",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/waxif/IdeaProjects/ProjectCv/User/src/main/resources",
+    "last_opened_file_path": "/Users/waxif/IdeaProjects/ProjectCv/User",
     "onboarding.tips.debug.path": "/Users/waxif/IdeaProjects/ProjectCv/Services/src/main/java/com/services/Main.java",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
@@ -117,11 +137,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/User/src/main/resources" />
-      <recent name="$PROJECT_DIR$/Skills/src/main/resources" />
-      <recent name="$PROJECT_DIR$/Services/src/main/resources" />
-      <recent name="$PROJECT_DIR$/Reviews/src/main/resources" />
-      <recent name="$PROJECT_DIR$/Projects/src/main/resources" />
+      <recent name="$PROJECT_DIR$/User" />
+      <recent name="$PROJECT_DIR$/Skills" />
+      <recent name="$PROJECT_DIR$/Services" />
+      <recent name="$PROJECT_DIR$/Reviews" />
+      <recent name="$PROJECT_DIR$/Projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/postman" />
@@ -135,13 +155,13 @@
       <recent name="com.user.services" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainUser">
-    <configuration name="MainProjects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.projects.MainProjects" />
-      <module name="ProjectCv.Projects.main" />
+  <component name="RunManager" selected="Application.MainExperience">
+    <configuration name="MainExperience" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.experience.MainExperience" />
+      <module name="ProjectCv.Experience.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.projects.*" />
+          <option name="PATTERN" value="com.experience.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -203,11 +223,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainExperience" />
         <item itemvalue="Application.MainSkills" />
         <item itemvalue="Application.MainServices" />
         <item itemvalue="Application.MainReviews" />
         <item itemvalue="Application.MainUser" />
-        <item itemvalue="Application.MainProjects" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727898799527</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Microservices">
+      <option name="closed" value="true" />
+      <created>1727899379941</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727899379941</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -331,6 +359,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.net.ConnectException" package="java.net" />
           <option name="timeStamp" value="8" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.postgresql.util.PSQLException" package="org.postgresql.util" />
+          <option name="timeStamp" value="9" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
