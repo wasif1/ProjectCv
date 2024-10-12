@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9aa62580-5ced-4539-8511-d1946ca3c42f" name="Changes" comment="Microservices">
-      <change afterPath="$PROJECT_DIR$/Experience/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reviews/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Skills/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="9aa62580-5ced-4539-8511-d1946ca3c42f" name="Changes" comment="Microservices with dockers containers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experience/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Experience/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experience/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Experience/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reviews/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Reviews/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Services/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skills/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Skills/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/User/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="staging" />
+        <entry key="$PROJECT_DIR$" value="microservices" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,36 +86,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build ProjectCv.executor": "Run",
-    "Gradle.ProjectCv [:com.cv.Main.main()].executor": "Run",
-    "Gradle.ProjectCv [:com.cv.MainApplicationClass.main()].executor": "Run",
-    "Gradle.ProjectCv [:org.example.Main.main()].executor": "Run",
-    "Gradle.ProjectCv.executor": "Run",
-    "Gradle.ProjectCv:Experience [:Experience:com.experience.MainExperience.main()].executor": "Run",
-    "Gradle.ProjectCv:Projects [:Projects:com.projects.MainProjects.main()].executor": "Run",
-    "Gradle.ProjectCv:Reviews [:Reviews:com.reviews.MainReviews.main()].executor": "Run",
-    "Gradle.ProjectCv:Services [:Services:com.services.MainServices.main()].executor": "Run",
-    "Gradle.ProjectCv:Skills [:Skills:com.skills.MainSkills.main()].executor": "Run",
-    "Gradle.ProjectCv:User [:User:com.user.MainUser.main()].executor": "Run",
-    "Gradle.ProjectCv:User [:User:user.MainUser.main()].executor": "Run",
-    "Gradle.UserControllerTest.shouldReturnDefaultMessage.executor": "Run",
-    "Gradle.UserServiceTests (1).executor": "Run",
-    "Gradle.UserServiceTests.executor": "Run",
-    "Gradle.UserServiceTests.testCreateUser.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "microservices",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/waxif/IdeaProjects/ProjectCv/User",
-    "onboarding.tips.debug.path": "/Users/waxif/IdeaProjects/ProjectCv/Services/src/main/java/com/services/Main.java",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build ProjectCv.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv [:com.cv.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv [:com.cv.MainApplicationClass.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv:Experience [:Experience:com.experience.MainExperience.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv:Projects [:Projects:com.projects.MainProjects.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv:Reviews [:Reviews:com.reviews.MainReviews.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv:Services [:Services:com.services.MainServices.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv:Skills [:Skills:com.skills.MainSkills.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv:User [:User:com.user.MainUser.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProjectCv:User [:User:user.MainUser.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserControllerTest.shouldReturnDefaultMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTests (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserServiceTests.testCreateUser.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;microservices__with__dockers&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/waxif/IdeaProjects/ProjectCv/User&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/waxif/IdeaProjects/ProjectCv/Services/src/main/java/com/services/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/User" />
@@ -223,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainExperience" />
+        <item itemvalue="Application.MainUser" />
         <item itemvalue="Application.MainSkills" />
         <item itemvalue="Application.MainServices" />
         <item itemvalue="Application.MainReviews" />
-        <item itemvalue="Application.MainUser" />
+        <item itemvalue="Application.MainExperience" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +307,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Experience Api added" />
     <MESSAGE value="Microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Microservices" />
+    <MESSAGE value="Microservices with dockers containers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Microservices with dockers containers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,6 +2,7 @@
 services:
   postgres-user:
     image: postgres
+    container_name: postgres-user # Explicit container name, no suffix
     environment:
       POSTGRES_USER: waxif
       POSTGRES_PASSWORD: waxif
@@ -13,6 +14,7 @@ services:
 
   postgres-experience:
     image: postgres
+    container_name: postgres-experience # Explicit container name, no suffix
     environment:
       POSTGRES_USER: waxif
       POSTGRES_PASSWORD: waxif
@@ -24,6 +26,7 @@ services:
 
   postgres-projects:
     image: postgres
+    container_name: postgres-projects # Explicit container name, no suffix
     environment:
       POSTGRES_USER: waxif
       POSTGRES_PASSWORD: waxif
@@ -35,6 +38,7 @@ services:
 
   postgres-reviews:
       image: postgres
+      container_name: postgres-reviews # Explicit container name, no suffix
       environment:
         POSTGRES_USER: waxif
         POSTGRES_PASSWORD: waxif
@@ -46,6 +50,7 @@ services:
 
   postgres-services:
     image: postgres
+    container_name: postgres-services # Explicit container name, no suffix
     environment:
       POSTGRES_USER: waxif
       POSTGRES_PASSWORD: waxif
@@ -57,6 +62,7 @@ services:
 
   postgres-skills:
     image: postgres
+    container_name: postgres-skills # Explicit container name, no suffix
     environment:
       POSTGRES_USER: waxif
       POSTGRES_PASSWORD: waxif
@@ -68,6 +74,7 @@ services:
 
   user-service:
     image: user-service
+    container_name: user-service # Explicit container name, no suffix
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-user:5432/userdb
       SPRING_DATASOURCE_USERNAME: waxif
@@ -77,10 +84,11 @@ services:
     networks:
       - spring-net
     ports:
-      - "8081:8080"
+      - "8081:8081"
 
   experience-service:
     image: experience-service
+    container_name: experience-service # Explicit container name, no suffix
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-experience:5432/experiencedb
       SPRING_DATASOURCE_USERNAME: waxif
@@ -95,56 +103,64 @@ services:
 
   projects-service:
     image: projects-service
+    container_name: projects-service # Explicit container name, no suffix
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-projects:5432/projectsdb
       SPRING_DATASOURCE_USERNAME: waxif
       SPRING_DATASOURCE_PASSWORD: waxif
     depends_on:
       - postgres-projects
+      - user-service
     networks:
       - spring-net
     ports:
-      - "8082:8080"
+      - "8082:8082"
 
   reviews-service:
     image: reviews-service
+    container_name: reviews-service # Explicit container name, no suffix
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-reviews:5432/reviewsdb
       SPRING_DATASOURCE_USERNAME: waxif
       SPRING_DATASOURCE_PASSWORD: waxif
     depends_on:
       - postgres-reviews
+      - user-service
     networks:
       - spring-net
     ports:
-      - "8083:8080"
+      - "8083:8083"
 
   services-service:
     image: services-service
+    container_name: services-service # Explicit container name, no suffix
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-services:5432/servicesdb
       SPRING_DATASOURCE_USERNAME: waxif
       SPRING_DATASOURCE_PASSWORD: waxif
     depends_on:
       - postgres-services
+      - user-service
     networks:
       - spring-net
     ports:
-      - "8084:8080"
+      - "8084:8084"
 
   skills-service:
     image: skills-service
+    container_name: skills-service # Explicit container name, no suffix
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-skills:5432/skillsdb
       SPRING_DATASOURCE_USERNAME: waxif
       SPRING_DATASOURCE_PASSWORD: waxif
     depends_on:
       - postgres-skills
+      - user-service
     networks:
       - spring-net
     ports:
-      - "8085:8080"
+      - "8085:8085"
 
 networks:
   spring-net:
-    driver: bridge
+   external: true
